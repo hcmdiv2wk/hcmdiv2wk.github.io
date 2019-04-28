@@ -32,6 +32,12 @@
 					Waskita Employee Meeting Attendance
 				</span>
 
+				<div class="wrap-input100 validate-input" data-validate="IP Address Perangkat Anda">
+					<input class="input100" type="text" readonly="readonly" name="IP" id="IP"
+						placeholder="IP">
+					<span class="focus-input100"></span>
+				</div>
+
 				<div class="wrap-input100 validate-input" data-validate="Gunakan QR Code">
 					<input class="input100" type="text" readonly="readonly" name="Meeting" id="Meeting"
 						placeholder="Meeting">
@@ -98,6 +104,14 @@
 
 		gtag('config', 'UA-23581568-13');
 	</script>
+
+	<script type="application/javascript">
+		function getIP(json) {
+		document.getElementById("IP").value = json.ip;
+		}
+	</script>
+	
+	<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 
 	<script>
 		function acceptParam() {
